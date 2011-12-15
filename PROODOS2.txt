@@ -1,0 +1,26 @@
+******************************************************
+summation(poly,k,n):={
+   local coefficients;
+   local stirlings_coef;
+   local poly_degree;
+   local j;
+   local sumn2:=0;
+   local sumn:=0;
+  coefficients:=symb2poly(poly,k);
+  poly_degree:=degree(poly,k);
+  
+  stirlings_coef:=Stirlings2(poly_degree+1);
+  for(j:=poly_degree;j>=1;j--){
+     stirlings_coef[j]:=coefficients[poly_degree-j]*revlist(stirlings_coef[j]);
+     for(k:=j;k>=1;k--){
+        sumn2:=(factorialPower(n,k+1)*stirlings_coef[j][j-k]/(k+1))+sumn2;
+    }
+    sumn2:=simplify(sumn2);
+    sumn:=sumn2+sumn; 
+    sumn2:=0;
+ }
+ sumn:=sumn+n*coefficients[poly_degree];
+ return(sumn);
+}
+:;
+******************************************************************
