@@ -45,7 +45,7 @@ for(j:=1;j<n;j++){
 return(pascalTriangle);
 }
 :;
-c
+******************************************************************
 factorialPower(x,n):={
   local f:=1;
   local j;
