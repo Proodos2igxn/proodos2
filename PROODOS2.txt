@@ -30,3 +30,30 @@ DifferenceDelta(expression,x):={
 }
 :;
 ******************************************************************
+PascalTriangle(n):={
+local pascalTriangle:=[[1]];
+local j,k;
+print(pascalTriangle[0]);
+for(j:=1;j<n;j++){
+  pascalTriangle:=append(pascalTriangle,[1]);
+  for(k:=1;k<j;k++){
+    pascalTriangle[j]:=append(pascalTriangle[j],pascalTriangle[j-1][k]+pascalTriangle[j-1][k-1]);
+  }
+  pascalTriangle[j]:=append(pascalTriangle[j],1);
+  print(pascalTriangle[j]);
+}
+return(pascalTriangle);
+}
+:;
+c
+factorialPower(x,n):={
+  local f:=1;
+  local j;
+  
+  for(j:=0;j<n;j++){
+    f:=f*(x-j);
+  }
+  return(simplify(f));
+}
+:;
+******************************************************************
