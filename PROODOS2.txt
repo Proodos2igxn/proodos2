@@ -19,7 +19,7 @@ summation(poly,k,n):={
     sumn:=sumn+sumn2; 
     sumn2:=0;
  }
- sumn:=sumn:=sumn+coefficients[poly_degree]*n;
+ sumn:=sumn+coefficients[poly_degree]*n;
  return(sumn);
 }
 :;
