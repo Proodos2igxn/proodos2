@@ -1,0 +1,660 @@
+// xcas version=0.9.3 fontsize=14 font=0 currentlevel=24
+// fltk 7Fl_Tile 21 -2831 864 471 14 0
+[
+// fltk N4xcas7EditeurE 21 -2831 864 413 14 0
+384 ,
+PascalTriangle(n):={
+local pascalTriangle:=[[1]];
+local j,k;
+print(pascalTriangle[0]);
+for(j:=1;j<n;j++){
+  pascalTriangle:=append(pascalTriangle,[1]);
+  for(k:=1;k<j;k++){
+    pascalTriangle[j]:=append(pascalTriangle[j],pascalTriangle[j-1][k]+pascalTriangle[j-1][k-1]);
+  }
+  pascalTriangle[j]:=append(pascalTriangle[j],1);
+  print(pascalTriangle[j]);
+}
+return(pascalTriangle);
+}
+:;
+,
+// fltk N4xcas10Log_OutputE 21 -2418 864 38 14 0
+// Parsing PascalTriangle£// Success compiling PascalTriangle£
+,
+// fltk N4xcas8EquationE 21 -2380 864 20 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 -2358 864 143 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -2358 864 31 14 0
+PascalTriangle(5)
+,
+// fltk N4xcas10Log_OutputE 21 -2327 864 92 14 0
+[1]£[1,1]£[1,2,1]£[1,3,3,1]£[1,4,6,4,1]£
+,
+// fltk N4xcas8EquationE 21 -2235 864 20 14 0 1
+[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+]
+,
+// fltk 7Fl_Tile 21 -2213 864 202 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -2213 864 24 14 0
+PascalTriangle(8)
+,
+// fltk N4xcas10Log_OutputE 21 -2189 864 146 14 0
+[1]£[1,1]£[1,2,1]£[1,3,3,1]£[1,4,6,4,1]£[1,5,10,10,5,1]£[1,6,15,20,15,6,1]£[1,7,21,35,35,21,7,1]£
+,
+// fltk N4xcas8EquationE 21 -2043 864 32 14 0 1
+[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],[1,5,10,10,5,1],[1,6,15,20,15,6,1],[1,7,21,35,35,21,7,1]]
+]
+,
+// fltk 7Fl_Tile 21 -2009 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -2009 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 -1985 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 -1982 864 322 14 0
+[
+// fltk N4xcas7EditeurE 21 -1982 864 285 14 0
+337 ,
+Stirlings2(n):={
+local stirlings2:=[[1]];
+local j,k;
+//print(stirlings2[0]);
+for(j:=1;j<n;j++){
+  stirlings2:=append(stirlings2,[0]);
+  for(k:=1;k<j;k++){
+    stirlings2[j]:=append(stirlings2[j],k*stirlings2[j-1][k]+stirlings2[j-1][k-1]);
+  }
+  stirlings2[j]:=append(stirlings2[j],1);
+ // print(stirlings2[j]);
+}
+return(stirlings2);
+}
+:;,
+// fltk N4xcas10Log_OutputE 21 -1697 864 38 14 0
+// Parsing Stirlings2£// Success compiling Stirlings2£
+,
+// fltk N4xcas8EquationE 21 -1659 864 20 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 -1658 864 45 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1658 864 24 14 0
+Stirlings2(4)
+,
+// fltk N4xcas10Log_OutputE 21 -1634 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -1633 864 20 14 0 1
+[[1],[0,1],[0,1,1],[0,1,3,1]]
+]
+,
+// fltk 7Fl_Tile 21 -1611 864 45 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1611 864 24 14 0
+Stirlings2(6)
+,
+// fltk N4xcas10Log_OutputE 21 -1587 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -1586 864 20 14 0 1
+[[1],[0,1],[0,1,1],[0,1,3,1],[0,1,7,6,1],[0,1,15,25,10,1]]
+]
+,
+// fltk 7Fl_Tile 21 -1564 864 76 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1564 864 24 14 0
+Stirlings2(11)
+,
+// fltk N4xcas10Log_OutputE 21 -1540 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -1539 864 51 14 0 1
+[[1],[0,1],[0,1,1],[0,1,3,1],[0,1,7,6,1],[0,1,15,25,10,1],[0,1,31,90,65,15,1],[0,1,63,301,350,140,21,1],[0,1,127,966,1701,1050,266,28,1],[0,1,255,3025,7770,6951,2646,462,36,1],[0,1,511,9330,34105,42525,22827,5880,750,45,1]]
+]
+,
+// fltk 7Fl_Tile 21 -1486 864 57 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1486 864 24 14 0
+Stirlings2(20)
+,
+// fltk N4xcas10Log_OutputE 21 -1462 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -1461 864 32 14 0 1
+[[1],[0,1],[0,1,1],[0,1,3,1],[0,1,7,6,1],[0,1,15,25,10,1],[0,1,31,90,65,15,1],[0,1,63,301,350,140,21,1],[0,1,127,966,1701,1050,266,28,1],[0,1,255,3025,7770,6951,2646,462,36,1],[0,1,511,9330,34105,42525,22827,5880,750,45,1],[0,1,1023,28501,145750,246730,179487,63987,11880,1155,55,1],[0,1,2047,86526,611501,1379400,1323652,627396,159027,22275,1705,66,1],[0,1,4095,261625,2532530,7508501,9321312,5715424,1899612,359502,39325,2431,78,1],[0,1,8191,788970,10391745,40075035,63436373,49329280,20912320,5135130,752752,66066,3367,91,1],[0,1,16383,2375101,42355950,210766920,420693273,408741333,216627840,67128490,12662650,1479478,106470,4550,105,1],[0,1,32767,7141686,171798901,1096190550,2734926558,3281882604,2141764053,820784250,193754990,28936908,2757118,165620,6020,120,1],[0,1,65535,21457825,694337290,5652751651,17505749898,25708104786,20415995028,9528822303,2758334150,512060978,62022324,4910178,249900,7820,136,1],[0,1,131071,64439010,2798806985,28958095545,110687251039,197462483400,189036065010,106175395755,37112163803,8391004908,1256328866,125854638,8408778,367200,9996,153,1],[0,1,262143,193448101,11259666950,147589284710,693081601779,1492924634839,1709751003480,1144614626805,477297033785,129413217791,23466951300,2892439160,243577530,13916778,527136,12597,171,1]]
+]
+,
+// fltk 7Fl_Tile 21 -1427 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1427 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 -1403 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 -1400 864 326 14 0
+[
+// fltk N4xcas7EditeurE 21 -1400 864 201 14 0
+119 ,
+factorialPower(x,n):={
+  local f:=1;
+  local j;
+  
+  for(j:=0;j<n;j++){
+    f:=f*(x-j);
+  }
+  return(simplify(f));
+}
+:;,
+// fltk N4xcas10Log_OutputE 21 -1199 864 101 14 0
+// Parsing factorialPower£// Success compiling factorialPower£
+,
+// fltk N4xcas8EquationE 21 -1098 864 24 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 -1072 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1072 864 24 14 0
+factorialPower(n,2)
+,
+// fltk N4xcas10Log_OutputE 21 -1048 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -1047 864 26 14 0 1
+n^2-n
+]
+,
+// fltk 7Fl_Tile 21 -1019 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -1019 864 24 14 0
+factorialPower(n,5)
+,
+// fltk N4xcas10Log_OutputE 21 -995 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -994 864 26 14 0 1
+n^5-10*n^4+35*n^3-50*n^2+24*n
+]
+,
+// fltk 7Fl_Tile 21 -966 864 240 14 0
+[
+// fltk N4xcas7EditeurE 21 -966 864 182 14 0
+115 ,
+Pochhammer(x,n):={
+  local f:=1;
+  local j;
+  
+  for(j:=0;j<n;j++){
+    f:=f*(x+j);
+  }
+  return(simplify(f));
+}
+:;,
+// fltk N4xcas10Log_OutputE 21 -784 864 38 14 0
+// Parsing Pochhammer£// Success compiling Pochhammer£
+,
+// fltk N4xcas8EquationE 21 -746 864 20 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 -724 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -724 864 24 14 0
+Pochhammer(n,4)
+,
+// fltk N4xcas10Log_OutputE 21 -700 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -699 864 26 14 0 1
+n^4+6*n^3+11*n^2+6*n
+]
+,
+// fltk 7Fl_Tile 21 -671 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -671 864 24 14 0
+Pochhammer(n,2)
+,
+// fltk N4xcas10Log_OutputE 21 -647 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -646 864 26 14 0 1
+n^2+n
+]
+,
+// fltk 7Fl_Tile 21 -618 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -618 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 -594 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 -591 864 287 14 0
+[
+// fltk N4xcas7EditeurE 21 -591 864 229 14 0
+106 ,
+DifferenceDelta(expression,x):={
+  local f:=unapply(expression,x);
+  return(simplify((f(x+1)-f(x))));
+}
+:;,
+// fltk N4xcas10Log_OutputE 21 -362 864 38 14 0
+// Parsing DifferenceDelta£// Success compiling DifferenceDelta£
+,
+// fltk N4xcas8EquationE 21 -324 864 20 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 -302 864 45 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -302 864 24 14 0
+DifferenceDelta(x^2,x)
+,
+// fltk N4xcas10Log_OutputE 21 -278 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -277 864 20 14 0 1
+2*x+1
+]
+,
+// fltk 7Fl_Tile 21 -255 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -255 864 24 14 0
+DifferenceDelta(x^3,x)
+,
+// fltk N4xcas10Log_OutputE 21 -231 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -230 864 26 14 0 1
+3*x^2+3*x+1
+]
+,
+// fltk 7Fl_Tile 21 -202 864 45 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -202 864 24 14 0
+DifferenceDelta(sin(x),x)
+,
+// fltk N4xcas10Log_OutputE 21 -178 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -177 864 20 14 0 1
+-sin(x)+sin(x+1)
+]
+,
+// fltk 7Fl_Tile 21 -155 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -155 864 24 14 0
+DifferenceDelta(x^-1,x)
+,
+// fltk N4xcas10Log_OutputE 21 -131 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -130 864 44 14 0 1
+-(1/(x^2+x))
+]
+,
+// fltk 7Fl_Tile 21 -84 864 51 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -84 864 24 14 0
+DifferenceDelta(x^4+5*x^3+67*x^2+80*x+139123,x)
+,
+// fltk N4xcas10Log_OutputE 21 -60 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 -59 864 26 14 0 1
+4*x^3+21*x^2+153*x+153
+]
+,
+// fltk 7Fl_Tile 21 -31 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 -31 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 -7 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 -4 864 486 14 0
+[
+// fltk N4xcas7EditeurE 21 -4 864 428 14 0
+602 ,
+summation(poly,k,n):={
+   local coefficients;
+   local stirlings_coef;
+   local poly_degree;
+   local j;
+   local sumn2:=0;
+   local sumn:=0;
+  coefficients:=symb2poly(poly,k);
+  poly_degree:=degree(poly,k);
+  
+  stirlings_coef:=Stirlings2(poly_degree+1);
+  for(j:=poly_degree;j>=1;j--){
+     stirlings_coef[j]:=revlist(stirlings_coef[j]);
+     for(k:=j;k>=1;k--){
+        sumn2:=(factorialPower(n,k+1)*stirlings_coef[j][j-k]/(k+1))+sumn2;
+    }
+    sumn2:=coefficients[poly_degree-j]*simplify(sumn2);
+    sumn:=sumn+sumn2; 
+    sumn2:=0;
+ }
+ sumn:=sumn+coefficients[poly_degree]*n;
+ return(sumn);
+}
+:;,
+// fltk N4xcas10Log_OutputE 21 424 864 38 14 0
+// Parsing summation£// Success compiling summation£
+,
+// fltk N4xcas8EquationE 21 462 864 20 14 0 1
+"Done"
+]
+,
+// fltk 7Fl_Tile 21 484 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 484 864 24 14 0
+sum(k^6+5*k^5,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 508 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 509 864 44 14 0 1
+(6*n^7-21*n^6+21*n^5-7*n^3+n)/42+(5*(2*n^6-6*n^5+5*n^4-n^2))/12
+]
+,
+// fltk 7Fl_Tile 21 555 864 67 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 555 864 22 14 0
+summation(k^6+5*k^5,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 577 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 578 864 44 14 0 1
+(6*n^7-21*n^6+21*n^5-7*n^3+n)/42+(5*(2*n^6-6*n^5+5*n^4-n^2))/12
+]
+,
+// fltk 7Fl_Tile 21 624 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 624 864 24 14 0
+sum(k^6,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 648 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 649 864 44 14 0 1
+(6*n^7-21*n^6+21*n^5-7*n^3+n)/42
+]
+,
+// fltk 7Fl_Tile 21 695 864 68 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 695 864 24 14 0
+summation(k^6,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 719 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 720 864 43 14 0 1
+(6*n^7-21*n^6+21*n^5-7*n^3+n)/42
+]
+,
+// fltk 7Fl_Tile 21 765 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 765 864 24 14 0
+sum(k^5+2*k,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 789 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 790 864 44 14 0 1
+(2*n^6-6*n^5+5*n^4-n^2)/12+(2*(n^2-n))/2
+]
+,
+// fltk 7Fl_Tile 21 836 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 836 864 24 14 0
+summation(k^5+2*k,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 860 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 861 864 44 14 0 1
+(2*n^6-6*n^5+5*n^4-n^2)/12+(2*(n^2-n))/2
+]
+,
+// fltk 7Fl_Tile 21 907 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 907 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 931 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 934 864 83 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 934 864 38 14 0
+sum(k^4+k^2+5*k+5,k,0,n-1)£
+,
+// fltk N4xcas10Log_OutputE 21 972 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 973 864 44 14 0 1
+(6*n^5-15*n^4+10*n^3-n)/30+(2*n^3-3*n^2+n)/6+(5*(n^2-n))/2+5*n
+]
+,
+// fltk 7Fl_Tile 21 1019 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1019 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 1043 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 1046 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1046 864 24 14 0
+summation(k^4+k^2+5*k+5,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 1070 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1071 864 44 14 0 1
+(6*n^5-15*n^4+10*n^3-n)/30+(2*n^3-3*n^2+n)/6+(5*(n^2-n))/2+5*n
+]
+,
+// fltk 7Fl_Tile 21 1117 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1117 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 1141 864 1 14 0
+
+]
+,
+// fltk 7Fl_Tile 21 1144 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1144 864 24 14 0
+sum(k^8,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 1168 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1169 864 44 14 0 1
+(10*n^9-45*n^8+60*n^7-42*n^5+20*n^3-3*n)/90
+]
+,
+// fltk 7Fl_Tile 21 1215 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1215 864 24 14 0
+summation(k^8,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 1239 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1240 864 44 14 0 1
+(10*n^9-45*n^8+60*n^7-42*n^5+20*n^3-3*n)/90
+]
+,
+// fltk 7Fl_Tile 21 1286 864 128 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1286 864 24 14 0
+sum(7*k^8+6*k^7+45*k^5+8*k^4+23*k^3+2*k^2+7*k+90,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 1310 864 20 14 0
+Evaluation time: 1.297£
+,
+// fltk N4xcas8EquationE 21 1330 864 84 14 0 1
+(7*(10*n^9-45*n^8+60*n^7-42*n^5+20*n^3-3*n))/90+(6*(3*n^8-12*n^7+14*n^6-7*n^4+2*n^2))/24+(45*(2*n^6-6*n^5+5*n^4-n^2))/12+(8*(6*n^5-15*n^4+10*n^3-n))/30+(23*(n^4-2*n^3+n^2))/4+(2*(2*n^3-3*n^2+n))/6+(7*(n^2-n))/2+90*n
+]
+,
+// fltk 7Fl_Tile 21 1416 864 109 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1416 864 24 14 0
+summation(7*k^8+6*k^7+45*k^5+8*k^4+23*k^3+2*k^2+7*k+90,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 1440 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1441 864 84 14 0 1
+(7*(10*n^9-45*n^8+60*n^7-42*n^5+20*n^3-3*n))/90+(6*(3*n^8-12*n^7+14*n^6-7*n^4+2*n^2))/24+(45*(2*n^6-6*n^5+5*n^4-n^2))/12+(8*(6*n^5-15*n^4+10*n^3-n))/30+(23*(n^4-2*n^3+n^2))/4+(2*(2*n^3-3*n^2+n))/6+(7*(n^2-n))/2+90*n
+]
+,
+// fltk 7Fl_Tile 21 1527 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1527 864 24 14 0
+summation(k^3,k,n)
+,
+// fltk N4xcas10Log_OutputE 21 1551 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1552 864 44 14 0 1
+(n^4-2*n^3+n^2)/4
+]
+,
+// fltk 7Fl_Tile 21 1598 864 69 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1598 864 24 14 0
+sum(k^3,k,0,n-1)
+,
+// fltk N4xcas10Log_OutputE 21 1622 864 1 14 0
+
+,
+// fltk N4xcas8EquationE 21 1623 864 44 14 0 1
+(n^4-2*n^3+n^2)/4
+]
+,
+// fltk 7Fl_Tile 21 1669 864 25 14 0
+[
+// fltk N4xcas19Multiline_Input_tabE 21 1669 864 24 14 0
+
+,
+// fltk N4xcas10Log_OutputE 21 1693 864 1 14 0
+
+]
+// context 6105 giac archive
+7 0 15 8 0 0 'cas_setup' 7 0 11 0 0 0
+0 0 0
+0 0 0
+0 1 0
+0 0 0
+7 0 2 1 íµ ÷Æ°>
+1  8 866 
+0 12 0
+7 0 4 0 2 0
+0 50 0
+0 0 0
+0 25 0
+0 0 0
+0 1 0
+0 0 0
+8 0 0 'xyztrange' 7 0 16 1 ‘ P‘ 
+1   a    
+1  4 866 
+1 ÿ// flt
+1  Multil
+1  tabE 1
+1  24 14 
+1 tk N4x
+1  utputE
+1  6 1 14
+1  6 1 14
+1  ltk N4
+0 1 0
+1 '44 14 
+1  *n^3+n
+0 3 0
+7 0 0 7 0 0 8 0 15 7 0 2 8 0 73 7 0 3 7 1 2 6 10 expression 6 1 x 7 1 2 0 0 0
+0 0 0
+8 0 42 7 0 2 7 0 2 7 1 1 8 0 15 7 0 2 8 0 0 'unapply' 7 1 2 6 10 expression 6 1 x 6 1 f 7 1 0 7 0 1 8 0 43 8 0 0 'simplify' 8 0 1 7 0 2 8 0 0 of 7 0 2 6 1 f 8 0 1 7 0 2 6 1 x 0 1 0
+8 0 2 8 0 0 of 7 0 2 6 1 f 6 1 x 6 15 DifferenceDelta 8 0 15 7 0 2 8 0 73 7 0 3 7 1 1 6 1 n 7 1 1 0 0 0
+8 0 42 7 0 2 7 0 2 7 1 3 8 0 15 7 0 2 7 0 1 7 0 1 0 1 0
+6 14 pascalTriangle 6 1 j 6 1 k 7 1 0 7 0 3 8 0 0 print 8 0 0 at 7 0 2 6 14 pascalTriangle 0 0 0
+8 0 71 7 0 4 8 0 15 7 0 2 0 1 0
+6 1 j 8 0 35 7 1 2 6 1 j 6 1 n 8 0 75 6 1 j 8 0 72 7 0 4 8 0 15 7 0 2 8 0 0 'append' 7 1 2 6 14 pascalTriangle 7 0 1 0 1 0
+6 14 pascalTriangle 8 0 71 7 0 4 8 0 15 7 0 2 0 1 0
+6 1 k 8 0 35 7 1 2 6 1 k 6 1 j 8 0 75 6 1 k 8 0 15 7 0 2 8 0 0 'append' 7 1 2 8 0 0 at 7 0 2 6 14 pascalTriangle 6 1 j 8 0 1 7 0 2 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 14 pascalTriangle 8 0 1 7 0 2 6 1 j 0 -1 0
+6 1 k 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 14 pascalTriangle 8 0 1 7 0 2 6 1 j 0 -1 0
+8 0 1 7 0 2 6 1 k 0 -1 0
+8 0 0 at 7 0 2 6 14 pascalTriangle 6 1 j 8 0 15 7 0 2 8 0 0 'append' 7 1 2 8 0 0 at 7 0 2 6 14 pascalTriangle 6 1 j 0 1 0
+8 0 0 at 7 0 2 6 14 pascalTriangle 6 1 j 8 0 0 print 8 0 0 at 7 0 2 6 14 pascalTriangle 6 1 j 8 0 43 6 14 pascalTriangle 6 14 PascalTriangle 8 0 15 7 0 2 8 0 73 7 0 3 7 1 2 6 1 x 6 1 n 7 1 2 0 0 0
+0 0 0
+8 0 42 7 0 2 7 0 2 7 1 2 8 0 15 7 0 2 0 1 0
+6 1 f 6 1 j 7 1 0 7 0 2 8 0 71 7 0 4 8 0 15 7 0 2 0 0 0
+6 1 j 8 0 35 7 1 2 6 1 j 6 1 n 8 0 75 6 1 j 8 0 15 7 0 2 8 0 4 7 1 2 6 1 f 8 0 1 7 0 2 6 1 x 6 1 j 6 1 f 8 0 43 8 0 0 'simplify' 6 1 f 6 10 Pochhammer 8 0 15 7 0 2 8 0 73 7 0 3 7 1 1 6 1 n 7 1 1 0 0 0
+8 0 42 7 0 2 7 0 2 7 1 3 8 0 15 7 0 2 7 0 1 7 0 1 0 1 0
+6 10 stirlings2 6 1 j 6 1 k 7 1 0 7 0 2 8 0 71 7 0 4 8 0 15 7 0 2 0 1 0
+6 1 j 8 0 35 7 1 2 6 1 j 6 1 n 8 0 75 6 1 j 8 0 72 7 0 3 8 0 15 7 0 2 8 0 0 'append' 7 1 2 6 10 stirlings2 7 0 1 0 0 0
+6 10 stirlings2 8 0 71 7 0 4 8 0 15 7 0 2 0 1 0
+6 1 k 8 0 35 7 1 2 6 1 k 6 1 j 8 0 75 6 1 k 8 0 15 7 0 2 8 0 0 'append' 7 1 2 8 0 0 at 7 0 2 6 10 stirlings2 6 1 j 8 0 1 7 0 2 8 0 4 7 1 2 6 1 k 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 10 stirlings2 8 0 1 7 0 2 6 1 j 0 -1 0
+6 1 k 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 10 stirlings2 8 0 1 7 0 2 6 1 j 0 -1 0
+8 0 1 7 0 2 6 1 k 0 -1 0
+8 0 0 at 7 0 2 6 10 stirlings2 6 1 j 8 0 15 7 0 2 8 0 0 'append' 7 1 2 8 0 0 at 7 0 2 6 10 stirlings2 6 1 j 0 1 0
+8 0 0 at 7 0 2 6 10 stirlings2 6 1 j 8 0 43 6 10 stirlings2 6 10 Stirlings2 8 0 15 7 0 2 8 0 73 7 0 3 7 1 1 6 1 x 7 1 1 0 0 0
+8 0 7 7 1 2 6 1 x 0 2 0
+6 1 f 8 0 15 7 0 2 8 0 73 7 0 3 7 1 2 6 1 x 6 1 n 7 1 2 0 0 0
+0 0 0
+8 0 42 7 0 2 7 0 2 7 1 2 8 0 15 7 0 2 0 1 0
+6 1 f 6 1 j 7 1 0 7 0 2 8 0 71 7 0 4 8 0 15 7 0 2 0 0 0
+6 1 j 8 0 35 7 1 2 6 1 j 6 1 n 8 0 75 6 1 j 8 0 15 7 0 2 8 0 4 7 1 2 6 1 f 8 0 1 7 0 2 6 1 x 8 0 2 6 1 j 6 1 f 8 0 43 8 0 0 'simplify' 6 1 f 6 14 factorialPower 8 0 15 7 0 2 7 0 3 0 1 0
+0 2 0
+0 3 0
+6 1 l 8 0 15 7 0 2 8 0 1 7 0 3 8 0 7 7 1 2 6 1 x 0 2 0
+8 0 4 7 0 2 0 2 0
+6 1 x 0 1 0
+6 1 p 8 0 15 7 0 2 8 0 73 7 0 3 7 1 3 6 4 poly 6 1 k 6 1 n 7 1 3 0 0 0
+0 0 0
+0 0 0
+8 0 42 7 0 2 7 0 2 7 1 6 6 12 coefficients 6 14 stirlings_coef 6 11 poly_degree 6 1 j 8 0 15 7 0 2 0 0 0
+6 5 sumn2 8 0 15 7 0 2 0 0 0
+6 4 sumn 7 1 0 7 0 6 8 0 15 7 0 2 8 0 0 'symb2poly' 7 1 2 6 4 poly 6 1 k 6 12 coefficients 8 0 15 7 0 2 8 0 0 'degree' 7 1 2 6 4 poly 6 1 k 6 11 poly_degree 8 0 15 7 0 2 8 0 0 of 7 0 2 6 10 Stirlings2 8 0 1 7 0 2 6 11 poly_degree 0 1 0
+6 14 stirlings_coef 8 0 71 7 0 4 8 0 15 7 0 2 6 11 poly_degree 6 1 j 8 0 38 7 1 2 6 1 j 0 1 0
+8 0 76 6 1 j 8 0 72 7 0 5 8 0 15 7 0 2 8 0 0 'revlist' 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 71 7 0 4 8 0 15 7 0 2 6 1 j 6 1 k 8 0 38 7 1 2 6 1 k 0 1 0
+8 0 76 6 1 k 8 0 15 7 0 2 8 0 1 7 0 2 8 0 4 7 1 2 8 0 0 of 7 0 2 6 14 factorialPower 7 1 2 6 1 n 8 0 1 7 0 2 6 1 k 0 1 0
+8 0 5 7 1 2 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 1 7 0 2 6 1 j 8 0 2 6 1 k 8 0 1 7 0 2 6 1 k 0 1 0
+6 5 sumn2 6 5 sumn2 8 0 15 7 0 2 8 0 4 7 1 2 8 0 0 at 7 0 2 6 12 coefficients 8 0 1 7 0 2 6 11 poly_degree 8 0 2 6 1 j 8 0 0 'simplify' 6 5 sumn2 6 5 sumn2 8 0 15 7 0 2 8 0 1 7 0 2 6 4 sumn 6 5 sumn2 6 4 sumn 8 0 15 7 0 2 0 0 0
+6 5 sumn2 8 0 15 7 0 2 8 0 1 7 0 2 6 4 sumn 8 0 4 7 1 2 8 0 0 at 7 0 2 6 12 coefficients 6 11 poly_degree 6 1 n 6 4 sumn 8 0 43 6 4 sumn 6 9 summation 8 0 15 7 0 2 8 0 73 7 0 3 7 1 3 6 4 poly 6 1 k 6 1 n 7 1 3 0 0 0
+0 0 0
+0 0 0
+8 0 42 7 0 2 7 0 2 7 1 6 6 12 coefficients 6 14 stirlings_coef 6 11 poly_degree 6 1 j 8 0 15 7 0 2 0 0 0
+6 5 sumn2 8 0 15 7 0 2 0 0 0
+6 4 sumn 7 1 0 7 0 6 8 0 15 7 0 2 8 0 0 'symb2poly' 7 1 2 6 4 poly 6 1 k 6 12 coefficients 8 0 15 7 0 2 8 0 0 'degree' 7 1 2 6 4 poly 6 1 k 6 11 poly_degree 8 0 15 7 0 2 8 0 0 of 7 0 2 6 10 Stirlings2 8 0 1 7 0 2 6 11 poly_degree 0 1 0
+6 14 stirlings_coef 8 0 71 7 0 4 8 0 15 7 0 2 6 11 poly_degree 6 1 j 8 0 38 7 1 2 6 1 j 0 1 0
+8 0 76 6 1 j 8 0 72 7 0 5 8 0 15 7 0 2 8 0 4 7 1 2 8 0 0 at 7 0 2 6 12 coefficients 8 0 1 7 0 2 6 11 poly_degree 8 0 2 6 1 j 8 0 0 'revlist' 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 71 7 0 4 8 0 15 7 0 2 6 1 j 6 1 k 8 0 38 7 1 2 6 1 k 0 1 0
+8 0 76 6 1 k 8 0 15 7 0 2 8 0 1 7 0 2 8 0 4 7 1 2 8 0 0 of 7 0 2 6 14 factorialPower 7 1 2 6 1 n 8 0 1 7 0 2 6 1 k 0 1 0
+8 0 5 7 1 2 8 0 0 at 7 0 2 8 0 0 at 7 0 2 6 14 stirlings_coef 6 1 j 8 0 1 7 0 2 6 1 j 8 0 2 6 1 k 8 0 1 7 0 2 6 1 k 0 1 0
+6 5 sumn2 6 5 sumn2 8 0 15 7 0 2 8 0 0 'simplify' 6 5 sumn2 6 5 sumn2 8 0 15 7 0 2 8 0 1 7 0 2 6 5 sumn2 6 4 sumn 6 4 sumn 8 0 15 7 0 2 0 0 0
+6 5 sumn2 8 0 15 7 0 2 8 0 1 7 0 2 6 4 sumn 8 0 4 7 1 2 6 1 n 8 0 0 at 7 0 2 6 12 coefficients 6 11 poly_degree 6 4 sumn 8 0 43 6 4 sumn 6 11 summutation 8 0 0 'xcas_mode' 0 0 0
+
